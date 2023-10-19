@@ -1,10 +1,8 @@
 
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-import 'portfolio_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,12 +12,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState(){
-    Timer(Duration(seconds: 5), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) =>PortfolioScreen()));
-    });
-  }
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
