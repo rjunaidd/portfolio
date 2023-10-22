@@ -1,5 +1,6 @@
 
 class ModelData{
+  final String fullName;
   final String name;
   final String number;
   final String mail;
@@ -9,6 +10,7 @@ class ModelData{
 
   ModelData(
       {
+        required this.fullName,
         required this.name,
         required this.mail,
         required this.hobbies,
