@@ -7,7 +7,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:portfolio/Data/app_data.dart';
 import 'package:portfolio/Utils/app_strings.dart';
 import 'package:portfolio/Utils/style_text.dart';
-import 'Screens/main_screen.dart';
+import 'main_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -28,6 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size size   = MediaQuery.of(context).size;
     return  Scaffold(
       backgroundColor: Colors.teal,
       body: Center(
@@ -35,20 +36,20 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
              const CircleAvatar(
-              radius: 80,
-              // backgroundColor: Colors.teal,
-              backgroundImage: AssetImage(AppString.PortfolioIcon),
-            ),
-            const SizedBox(height: 40,),
-            const Text("Design By" , style: TextStyle(color: Colors.white ,fontSize: 25 , fontWeight: FontWeight.bold , ),),
-            const SizedBox(height: 30,),
+               radius: 80,
+               // backgroundColor: Colors.teal,
+               backgroundImage: AssetImage(AppString.PortfolioIcon),
+             ),
+             SizedBox(height: size.height * 0.1,),
+             Text("Design By" , style: StyleText.StyleSkranji),
+             SizedBox(height: size.height * 0.08,),
              Text(AppData.modelData.name , style: StyleText.LexendStyle),
-            const SizedBox(height: 80,),
+             SizedBox(height: size.height * 0.1,),
             LoadingAnimationWidget.staggeredDotsWave(
               color: Colors.white,
               size: 50,
             ),
-            const SizedBox(height: 20),
+             SizedBox(height: size.height * 0.02),
             const Text("Loading..." ,style: TextStyle(color: Colors.black , fontSize: 22 , fontWeight: FontWeight.normal), ),
 
           ],

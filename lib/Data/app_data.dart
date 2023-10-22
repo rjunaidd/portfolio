@@ -4,6 +4,7 @@ class AppData{
   AppData._();
 
   static ModelData modelData = ModelData(
+    fullName: "Roaf Junaid",
       name: "r_junaid6",
       mail: "roafjunaid09@gmail.com",
       hobbies:<String> [

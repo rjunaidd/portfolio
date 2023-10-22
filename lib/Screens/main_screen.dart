@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Screens/home_screen.dart';
+import 'package:portfolio/Screens/profile_screen.dart';
+import 'package:portfolio/Screens/work_screen.dart';
+
+import 'drawer_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -8,6 +13,19 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+
+  int _currenyIndex = 1;
+  final List _page = [
+    ProfilePage(),
+    HomePage(),
+    WorkPage(),
+  ];
+
+  void _gotoPage(index){
+    setState(() {
+      _currenyIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,34 +33,28 @@ class _DashboardScreenState extends State<DashboardScreen> {
         title: Text("My Portfolio"),
         backgroundColor: Colors.grey,
       ),
-      body: Stack(
-
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              image: DecorationImage(
-                  image:AssetImage("assets/appdev.jpg"),
-              // fit: BoxFit.fill
-              ),
-            ),
-          ),
-          Positioned(
-            top: 0,
-              left: 20,
-              right: 0,
-              child:Column(
-          children: [
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.black,
-            ),
-          ],
-              ),
-          ),
+      drawer: DrawerScreen(),
+      body: _page[_currenyIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.grey,
+        selectedItemColor: Colors.brown.shade900,
+        selectedFontSize: 16,
+        showUnselectedLabels: false,
+        unselectedItemColor:  Colors.blue.shade900,
+        onTap: _gotoPage,
+        items:const [
+          BottomNavigationBarItem(
+              icon:Icon(Icons.person),
+              label: "Profile"),
+          BottomNavigationBarItem(
+              icon:Icon(Icons.home),
+              label: "Home"),
+          BottomNavigationBarItem(
+              icon:Icon(Icons.work),
+              label: "Work"),
         ],
       ),
+
     );
   }
 }
