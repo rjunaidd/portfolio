@@ -1,7 +1,13 @@
 
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:portfolio/Data/app_data.dart';
+import 'package:portfolio/Utils/app_strings.dart';
+import 'package:portfolio/Utils/style_text.dart';
+import 'Screens/main_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -12,6 +18,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState(){
+    super.initState();
+    Timer(const Duration(seconds: 3), () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>const DashboardScreen()));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +34,15 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const  CircleAvatar(
+             const CircleAvatar(
               radius: 80,
               // backgroundColor: Colors.teal,
-              backgroundImage: AssetImage("assets/1.png"),
+              backgroundImage: AssetImage(AppString.PortfolioIcon),
             ),
             const SizedBox(height: 40,),
-            const Text("Design By" , style: TextStyle(color: Colors.white ,fontSize: 25 , fontWeight: FontWeight.bold),),
+            const Text("Design By" , style: TextStyle(color: Colors.white ,fontSize: 25 , fontWeight: FontWeight.bold , ),),
             const SizedBox(height: 30,),
-            const Text("Roaf Junaid" , style: TextStyle(color: Colors.black ,fontSize: 25 , fontWeight: FontWeight.bold),),
+             Text(AppData.modelData.name , style: StyleText.LexendStyle),
             const SizedBox(height: 80,),
             LoadingAnimationWidget.staggeredDotsWave(
               color: Colors.white,

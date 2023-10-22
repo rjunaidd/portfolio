@@ -64,6 +64,7 @@ flutter:
     - assets/1.png
     - assets/r j.jpg
     - assets/rj.jpg
+    - assets/appdev.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -77,7 +78,22 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-Light.ttf
+    - family: Gloock
+      fonts:
+        - asset: fonts/Gloock-Regular.ttf
+    - family: DM Serif Display
+      fonts:
+        - asset: fonts/DMSerifDisplay-Regular.ttf
+    - family: Lexend
+      fonts:
+        - asset: fonts/Lexend-Medium.ttf
+    - family: Skranji
+      fonts:
+        - asset: fonts/Skranji-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
