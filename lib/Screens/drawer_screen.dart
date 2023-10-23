@@ -45,8 +45,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   SizedBox(
                     height: size.height * 0.33,
                   ),
-                  Text(
-                      "All Right Reserved" , style: StyleText.alltext),
+                  Text("All Right Reserved" , style: StyleText.alltext,),
                 ],
               ),
             ],

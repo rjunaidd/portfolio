@@ -4,7 +4,6 @@ import 'package:portfolio/Screens/profile_screen.dart';
 import 'package:portfolio/Screens/work_screen.dart';
 
 import 'drawer_screen.dart';
-
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
@@ -16,12 +15,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   int _currenyIndex = 1;
   final List _page = [
-    ProfilePage(),
-    HomePage(),
-    WorkPage(),
+   const ProfilePage(),
+    const HomePage(),
+    const WorkPage(),
   ];
 
-  void _gotoPage(index){
+  void gotoPage(int index){
     setState(() {
       _currenyIndex = index;
     });
@@ -29,6 +28,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text("My Portfolio"),
         backgroundColor: Colors.grey,
@@ -41,7 +41,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         selectedFontSize: 16,
         showUnselectedLabels: false,
         unselectedItemColor:  Colors.blue.shade900,
-        onTap: _gotoPage,
+        onTap: gotoPage,
         items:const [
           BottomNavigationBarItem(
               icon:Icon(Icons.person),
