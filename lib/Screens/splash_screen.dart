@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
                // backgroundColor: Colors.teal,
                backgroundImage: AssetImage(AppString.PortfolioIcon),
              ),
-             SizedBox(height: size.height * 0.1,),
+             SizedBox(height: size.height * 0.08,),
              Text("Design By" , style: StyleText.StyleSkranji),
              SizedBox(height: size.height * 0.08,),
              Text(AppData.modelData.name , style: StyleText.LexendStyle),
