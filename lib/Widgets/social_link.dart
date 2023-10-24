@@ -16,11 +16,13 @@ class ImagesLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){
-        _launchURL(urllink);
-      },
-      child: Image.asset(linkimages ,width: 50 , height: 50,),
+    return GestureDetector(
+      child: InkWell(
+        onTap: (){
+          _launchURL(urllink);
+        },
+        child: Image.asset(linkimages ,width: 50 , height: 50,),
+      ),
     );
   }
   Future<void> _launchURL(String url) async {
