@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/Data/app_data.dart';
 import 'package:portfolio/Utils/app_strings.dart';
 import 'package:portfolio/Utils/style_text.dart';
+import 'package:portfolio/Widgets/profile_list.dart';
 
 
 import '../Widgets/social_link.dart';
@@ -55,25 +56,8 @@ class _ProfilePageState extends State<ProfilePage> {
             SizedBox(
               height: size.height * 0.01,
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Card(
-                elevation: 10,
-                color: Colors.grey.shade100,
-                child: Row(
-                  children: [
-                    Icon(Icons.person_2_outlined),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Fatherr Name"),
-                        Text("Muhammad Yaqoob")
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
+            const ProfileList(titleref: "Muhammad Yaqoob", title: "Father Name", icon: Icons.people_alt_outlined),
+            const ProfileList(titleref: "3510321358654", title: "Email", icon: Icons.mail_lock_outlined)
           ],
         ),
       ),
