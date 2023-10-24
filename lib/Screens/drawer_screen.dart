@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Screens/profile_screen.dart';
 import 'package:portfolio/Utils/style_text.dart';
 import 'package:portfolio/Widgets/drawer_button.dart';
 import 'package:portfolio/Widgets/drawer_heading.dart';
@@ -27,9 +28,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   SizedBox(
                     height: size.height * 0.05,
                   ),
-                 const ButtonDrawer(
-                      title:"Check Profile"
-                  ),
+                 InkWell(
+                   onTap: (){
+                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProfilePage()));
+                   },
+                   child:  ButtonDrawer(
+                        title:"Check Profile"
+                    ),
+                 ),
                   SizedBox(
                     height: size.height * 0.02,
                   ),
