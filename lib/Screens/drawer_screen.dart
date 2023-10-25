@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Screens/my_education.dart';
 import 'package:portfolio/Screens/profile_screen.dart';
 import 'package:portfolio/Utils/style_text.dart';
 import 'package:portfolio/Widgets/drawer_button.dart';
@@ -39,8 +40,11 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   SizedBox(
                     height: size.height * 0.02,
                   ),
-                 const ButtonDrawer(
-                      title: "My Education"
+                  InkWell(
+                    onTap: ()=> Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const EducationScreen())),
+                    child:const ButtonDrawer(
+                        title: "My Education"
+                    ),
                   ),
                   SizedBox(
                     height: size.height * 0.02,
