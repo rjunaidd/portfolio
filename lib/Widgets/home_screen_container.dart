@@ -16,9 +16,9 @@ class HomeScreenContainer extends StatelessWidget {
     return  Padding(
       padding:const EdgeInsets.symmetric(vertical: 40 , horizontal: 20),
       child: Card(
-        elevation: 10,
+        elevation: 20,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30)
+            borderRadius: BorderRadius.circular(10)
         ),
         child: Container(
             width: 120,

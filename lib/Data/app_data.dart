@@ -5,12 +5,14 @@ class AppData{
 
   static ModelData modelData = ModelData(
     fullName: "Roaf Junaid",
+      fatherName: "Muhammad Yaqoob",
       name: "r_junaid6",
       mail: "roafjunaid09@gmail.com",
       hobbies:<String> [
         "Travelling",
         "Learning about Devlopment",
         "Lonely Time Spend"
+        "Gardening"
       ] ,
       number: "+9230533320355",
       bio: devBio ,

@@ -19,6 +19,10 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return  Scaffold(
+      appBar: AppBar(
+        title:const Text("Profile"),
+        backgroundColor: Colors.grey,
+      ),
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -65,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
               SizedBox(
                 height: size.height * 0.01,
               ),
-              const ProfileList(titleref: "Muhammad Yaqoob", title: "Father Name", icon: Icons.people_alt_outlined),
+              const ProfileList(title: "Father Name", icon: FontAwesomeIcons.person, titleref:"Muhammad Yaqoob" ),
               const ProfileList(titleref: "roafjunaaid09@gmail.com", title: "Email", icon: Icons.mail_outline),
               const ProfileList(title: "Phone", icon: Icons.phone, titleref: "+9230533320355"),
               const ProfileList(title: "CNIC", icon: Icons.sd_card_alert_outlined, titleref: "35103-2135866-5"),

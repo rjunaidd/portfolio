@@ -2,6 +2,7 @@
 class ModelData{
   final String fullName;
   final String name;
+  final String fatherName;
   final String number;
   final String mail;
   final String bio;
@@ -10,6 +11,7 @@ class ModelData{
 
   ModelData(
       {
+        required this.fatherName,
         required this.fullName,
         required this.name,
         required this.mail,
