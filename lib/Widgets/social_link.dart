@@ -5,11 +5,11 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ImagesLink extends StatelessWidget {
 
-  final String linkimages;
+  final IconData icon;
   final String urllink;
   const ImagesLink({
     super.key,
-    required this.linkimages,
+    required this.icon,
     required this.urllink
   });
 
@@ -17,12 +17,10 @@ class ImagesLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: InkWell(
-        onTap: (){
-          _launchURL(urllink);
-        },
-        child: Image.asset(linkimages ,width: 50 , height: 50,),
-      ),
+       onTap: (){
+      _launchURL(urllink);
+    },
+    child: Icon(icon , size: 40,),
     );
   }
   Future<void> _launchURL(String url) async {
