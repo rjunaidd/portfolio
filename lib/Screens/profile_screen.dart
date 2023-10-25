@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Data/app_data.dart';
 import 'package:portfolio/Utils/app_strings.dart';
 import 'package:portfolio/Utils/style_text.dart';
@@ -48,23 +49,17 @@ class _ProfilePageState extends State<ProfilePage> {
                 height: size.height * 0.02,
               ),
               Row(
-
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: size.width * 0.25,
-                  ),
-                 const ImagesLink(linkimages: AppString.Instalink, urllink: "https://www.instagram.com/r_junaid6/"),
+                 const ImagesLink(icon: FontAwesomeIcons.instagram, urllink: "https://www.instagram.com/r_junaid6/"),
                   SizedBox(
                     width: size.width * 0.04,
                   ),
-                  const ImagesLink(linkimages: AppString.githublink, urllink: "https://github.com/rjunaidd"),
+                  const  ImagesLink(icon:FontAwesomeIcons.github , urllink: "https://github.com/rjunaidd"),
                   SizedBox(
                     width: size.width * 0.04,
                   ),
-                  const ImagesLink(linkimages: AppString.linkedinlink, urllink: "https://www.linkedin.com/in/roaf-junaid-a8895a264/"),
-                  SizedBox(
-                    width: size.width * 0.1,
-                  ),
+                  const ImagesLink(icon: FontAwesomeIcons.linkedin, urllink:  "https://www.linkedin.com/in/roaf-junaid-a8895a264/"),
                 ],
               ),
               SizedBox(
