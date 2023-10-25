@@ -5,7 +5,7 @@ class StyleText{
   StyleText._();
   static  final TextStyle StyleSkranji = TextStyle(color: Colors.black , fontSize: 24 , fontWeight: FontWeight.bold);
   static  final TextStyle StyleCard = TextStyle(color: Colors.black ,fontFamily: "DM Serif Display", fontSize: 16 , fontWeight: FontWeight.bold);
-  static  final TextStyle StyleCardRef = TextStyle(color: Colors.black , fontFamily: "Lexend",fontSize: 18 , fontWeight: FontWeight.bold);
+  static  final TextStyle StyleCardRef = TextStyle(color: Colors.black , fontFamily: "Lexend",fontSize: 18 );
   static final TextStyle LexendStyle = TextStyle(color: Colors.white ,fontSize: 28 , fontWeight: FontWeight.bold);
   static final TextStyle DrawerLexendStyle = TextStyle(color: Colors.white ,fontSize: 20 , fontWeight: FontWeight.bold);
   static final TextStyle DrawerMailLexendStyle = TextStyle(color: Colors.white ,fontSize: 16 , fontWeight: FontWeight.bold);
