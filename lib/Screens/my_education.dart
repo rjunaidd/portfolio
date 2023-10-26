@@ -62,8 +62,8 @@ class _EducationScreenState extends State<EducationScreen> {
                               Board: "Bise Lahore",
                               Marks: "846"),
                           const EducationCard(
-                              Qualification:"Matric (Bio)" ,
-                              Year: "2017",
+                              Qualification:"Fsc (Engineering" ,
+                              Year: "2019",
                               Board: "Bise Lahore",
                               Marks: "846"),
                           const  EducationCard(
