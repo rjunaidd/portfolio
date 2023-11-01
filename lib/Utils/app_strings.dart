@@ -4,6 +4,7 @@ class AppString{
 
 
   static const String  EducationPic = "assets/education.png";
+  static const String  SkillPic = "assets/skills.png";
   static const String   ProfileAsset = "assets/r j.jpg";
   static const String   PortfolioIcon = "assets/1.png";
   static const String  StackImages = "assets/appdev.jpg";
