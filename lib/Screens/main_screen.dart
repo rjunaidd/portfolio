@@ -31,7 +31,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
       appBar: AppBar(
         title: Text("My Portfolio"),
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.grey.shade700,
       ),
       drawer: DrawerScreen(),
       body: _page[_currenyIndex],

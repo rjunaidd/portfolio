@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Screens/my_education.dart';
 import 'package:portfolio/Screens/profile_screen.dart';
+import 'package:portfolio/Screens/skill_screen.dart';
 import 'package:portfolio/Utils/style_text.dart';
 import 'package:portfolio/Widgets/drawer_button.dart';
 import 'package:portfolio/Widgets/drawer_heading.dart';
@@ -49,9 +50,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   SizedBox(
                     height: size.height * 0.02,
                   ),
-                 const ButtonDrawer(
-                      title: "View My Skills"
-                  ),
+                 InkWell(
+                   onTap: (){
+                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => SkillScreen()));
+                   },
+                   child: const ButtonDrawer(
+                        title: "View My Skills"
+                    ),
+                 ),
                   SizedBox(
                     height: size.height * 0.33,
                   ),

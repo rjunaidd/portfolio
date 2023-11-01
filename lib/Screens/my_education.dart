@@ -18,7 +18,7 @@ class _EducationScreenState extends State<EducationScreen> {
     return Scaffold(
       appBar: AppBar(
         title:const Text("My Education"),
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.grey.shade700,
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
