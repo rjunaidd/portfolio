@@ -18,14 +18,26 @@ class AppData{
       bio: devBio ,
       skillAndProgress: <SkillAndProgress> [
         SkillAndProgress(
-            name:"Software Engineer" ,
+            name:"Dart Basic Programming " ,
             progress:0.7 ),
         SkillAndProgress(
-            name:"Flutter Developer" ,
+            name:"OOP Concept " ,
+            progress: 0.8),
+        SkillAndProgress(
+            name: "Widgets" ,
             progress: 0.7),
         SkillAndProgress(
-            name: "Mobile App Developer" ,
-            progress: 0.6),
+            name: "MVC & MVVM" ,
+            progress: 0.7),
+        SkillAndProgress(
+            name: "Git" ,
+            progress: 0.9),
+        SkillAndProgress(
+            name: "Rest API's Integration" ,
+            progress: 0.65),
+        SkillAndProgress(
+            name: "Firebase" ,
+            progress: 0.5),
       ]
   );
 
