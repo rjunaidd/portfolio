@@ -30,8 +30,8 @@ class ProgressBar extends StatelessWidget {
             height: size.height * 0.01,
           ),
           LinearPercentIndicator(
-            lineHeight: size.height * 0.02,
-            width: size.width * 0.8,
+            lineHeight: size.height * 0.01,
+            width: size.width * 0.85,
             alignment: MainAxisAlignment.center,
             barRadius:const Radius.circular(30),
             progressColor: Colors.grey.shade500,

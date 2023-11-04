@@ -8,34 +8,44 @@ class SkillScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return  Scaffold(
       appBar: AppBar(
         title:const Text("My Skills"),
         backgroundColor: Colors.grey.shade700,
       ),
       body: Center(
-        child: Column(
-          children: [
-            const Image(image: AssetImage(AppString.SkillPic)),
-            Card(
-              elevation: 10,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              SizedBox(
+                height: size.height * 0.05,
               ),
-              color: Colors.grey.shade300,
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  children: List.generate(AppData.modelData.skillAndProgress.length,
-                        (index) => ProgressBar(
-                        progresstitle: AppData.modelData.skillAndProgress[index].name,
-                        progresss: AppData.modelData.skillAndProgress[index].progress
+              const Image(image: AssetImage(AppString.SkillPic)),
+              SizedBox(
+                height: size.height * 0.09,
+              ),
+              Card(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)
+                ),
+                color: Colors.grey.shade300,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: List.generate(AppData.modelData.skillAndProgress.length,
+                          (index) => ProgressBar(
+                          progresstitle: AppData.modelData.skillAndProgress[index].name,
+                          progresss: AppData.modelData.skillAndProgress[index].progress
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
