@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/Screens/drawer_screen.dart';
 import 'package:portfolio/Screens/my_education.dart';
 import 'package:portfolio/Screens/profile_screen.dart';
 import 'package:portfolio/Screens/skill_screen.dart';
@@ -17,6 +18,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return  Scaffold(
+      appBar: AppBar(
+        title: Text("My Portfolio"),
+        backgroundColor: Colors.grey.shade700,
+      ),
+    drawer: DrawerScreen(),
     body: Column(
       children: [
         Row(

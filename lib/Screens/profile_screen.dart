@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Data/app_data.dart';
+import 'package:portfolio/Screens/drawer_screen.dart';
 import 'package:portfolio/Utils/app_strings.dart';
 import 'package:portfolio/Utils/style_text.dart';
 import 'package:portfolio/Widgets/profile_list.dart';
@@ -23,6 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
         title:const Text("Profile"),
         backgroundColor: Colors.grey.shade700,
       ),
+
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,

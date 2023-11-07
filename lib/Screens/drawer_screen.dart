@@ -18,6 +18,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return  SafeArea(
+
         child: Container(
           color: Colors.white,
           height: double.infinity,
@@ -58,10 +59,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         title: "View My Skills"
                     ),
                  ),
-                  SizedBox(
-                    height: size.height * 0.33,
-                  ),
-                  Text("All Right Reserved" , style: StyleText.alltext,),
+          
                 ],
               ),
             ],
