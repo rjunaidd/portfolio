@@ -29,10 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
-        title: Text("My Portfolio"),
-        backgroundColor: Colors.grey.shade700,
-      ),
+
       drawer: DrawerScreen(),
       body: _page[_currenyIndex],
       bottomNavigationBar: BottomNavigationBar(
