@@ -20,7 +20,7 @@ class SkillScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: size.height * 0.05,
+                height: size.height  * 0.05,
               ),
               const Image(image: AssetImage(AppString.SkillPic)),
               SizedBox(
