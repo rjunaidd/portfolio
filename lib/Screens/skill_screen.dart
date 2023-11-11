@@ -19,7 +19,7 @@ class SkillScreen extends StatelessWidget {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
-            children: [
+            children:  [
               SizedBox(
                 height: size.height  * 0.05,
               ),
