@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Data/app_data.dart';
 import 'package:portfolio/Utils/app_strings.dart';
+import 'package:portfolio/Utils/style_text.dart';
 import 'package:portfolio/Widgets/progress_bar.dart';
 
 class SkillScreen extends StatelessWidget {
@@ -25,6 +26,10 @@ class SkillScreen extends StatelessWidget {
               const Image(image: AssetImage(AppString.SkillPic)),
               SizedBox(
                 height: size.height * 0.09,
+              ),
+              Text("Skills" , style: StyleText.DrawerButton,),
+              SizedBox(
+                height: size.height * 0.03,
               ),
               Card(
                 elevation: 10,
