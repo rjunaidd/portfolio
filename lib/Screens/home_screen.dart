@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Screens/drawer_screen.dart';
+import 'package:portfolio/Screens/hobby_screen.dart';
 import 'package:portfolio/Screens/my_education.dart';
 import 'package:portfolio/Screens/profile_screen.dart';
 import 'package:portfolio/Screens/skill_screen.dart';
@@ -45,7 +46,9 @@ class _HomePageState extends State<HomePage> {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => SkillScreen()));
               },
                 child: HomeScreenContainer(icon: Icons.person_search, title: "Skills")),
-            HomeScreenContainer(icon: Icons.work, title: "Work")
+            InkWell(
+              onTap:() => Navigator.of(context).push(MaterialPageRoute(builder: (context) => HobbyScreen())),
+                child: HomeScreenContainer(icon: Icons.work, title: "Work"))
           ],
         ),
         const Row(
