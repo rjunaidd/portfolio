@@ -28,8 +28,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
       drawer: DrawerScreen(),
       body: _page[_currenyIndex],
       bottomNavigationBar: BottomNavigationBar(

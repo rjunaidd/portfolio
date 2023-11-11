@@ -50,6 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
               size: 50,
             ),
              SizedBox(height: size.height * 0.01),
+
             const Text("Loading..." ,style: TextStyle(color: Colors.black , fontSize: 22 , fontWeight: FontWeight.normal), ),
 
           ],
